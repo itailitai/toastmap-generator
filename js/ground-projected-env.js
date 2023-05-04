@@ -208,7 +208,7 @@
             return this.envMap = await r.loadAsync(t), this.envMap.mapping = THREE.EquirectangularReflectionMapping, new n(this.envMap)
         },
         cleanup() {
-            const t = this.el.sceneEl.object3D;
+            const t = this.el.sceneEl.scene;
             this.skybox && t.remove(this.skybox), this.envMap && (t.environment = null, this.envMap.dispose())
         },
         remove: function() {
